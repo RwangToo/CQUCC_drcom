@@ -6,7 +6,9 @@
 
     get使用drcom_cron.sh，post使用drcom_cron.sh
   
-3、打开文件修改server，user，password。按照自己的情况修改curl
+3、打开文件修改server，user，password。需要tgbot提醒还需要修改tg_token和tg_id
+
+    按照自己的情况修改curl
 
 4、Padavan放入/etc/storage并保存，OpenWrt放入/etc。
 
