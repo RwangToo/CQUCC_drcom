@@ -4,7 +4,7 @@
 
 2、确认drcom的认证类型（get or post）
 
-    get使用drcom_cron.sh，post使用drcom_cron.sh
+    get使用drcom_cron.sh，post使用drcom_cron_post.sh
   
 3、打开文件修改server，user，password。需要tgbot提醒还需要修改tg_token和tg_id
 
