@@ -1,0 +1,6 @@
+chmod +x drcom_cron.sh
+
+#每周一到周日的每天6点到24点的每10分钟，执行一次检测登录指令
+*/10 * * * * /etc/drcom_cron.sh
+
+00 4 * * * sleep 5 && touch /etc/banner && reboot

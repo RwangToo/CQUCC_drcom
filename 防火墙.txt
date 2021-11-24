@@ -1,0 +1,22 @@
+# 创建一个叫PrivoxyUA的表
+iptables -t nat -N PrivoxyUA
+# 将PrivoxyUA添加到PREROUTING表
+iptables -t nat -A PREROUTING -i br-lan -p tcp -j PrivoxyUA
+
+# 对如下地址不进行转发（都是内网）
+iptables -t nat -A PrivoxyUA -d 0.0.0.0/8 -j RETURN
+iptables -t nat -A PrivoxyUA -d 10.0.0.0/8 -j RETURN
+iptables -t nat -A PrivoxyUA -d 127.0.0.0/8 -j RETURN
+iptables -t nat -A PrivoxyUA -d 169.254.0.0/16 -j RETURN
+iptables -t nat -A PrivoxyUA -d 172.16.0.0/12 -j RETURN
+iptables -t nat -A PrivoxyUA -d 192.168.0.0/16 -j RETURN
+iptables -t nat -A PrivoxyUA -d 224.0.0.0/4 -j RETURN
+iptables -t nat -A PrivoxyUA -d 240.0.0.0/4 -j RETURN
+
+# 重定向80端口的数据到8118端口（之前Privoxy的代理端口）
+iptables -t nat -A PrivoxyUA -p tcp --dport 80 -j REDIRECT --to-ports 8118
+# 因为https是无法直接检测UA的，所以没必要重定向转发
+# iptables -t nat -A PrivoxyUA -p tcp --dport 443 -j REDIRECT --to-ports 8118
+
+#PC放行
+iptables -t nat -I PrivoxyUA -m mac --mac-source 60:18:95:27:04:1e -j RETURN
