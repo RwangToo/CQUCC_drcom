@@ -17,3 +17,12 @@
     chmod +x drcom_cron.sh
 
 5、在Crontab中添加定时（drcom.txt）也可以按照crontab.guru修改。
+
+
+
+
+
+参考大佬：
+        https://jakting.com/archives/drcom-autologin-padavan-tgbot.html
+        https://www.right.com.cn/forum/thread-249325-1-1.html
+        https://catalog.chn.moe/
