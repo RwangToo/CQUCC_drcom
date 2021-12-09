@@ -11,7 +11,7 @@
   添加运行权限
   
     chmod +x drcom_cron.sh
-### 5、在Crontab中添加定时（drcom.txt）也可以按照[crontab](crontab.guru)修改。
+### 5、在Crontab中添加定时（drcom.txt）也可以按照[crontab](https://crontab.guru)修改。
 
 
 
