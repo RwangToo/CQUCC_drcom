@@ -1,0 +1,11 @@
+/usr/lib/lua/luci/dispatcher.lua:582: bad argument #1 to 'pairs' (table expected, got nil)
+stack traceback:
+        [C]: in function 'pairs'
+        /usr/lib/lua/luci/dispatcher.lua:582: in function 'createtree'
+        /usr/lib/lua/luci/dispatcher.lua:230: in function 'dispatch'
+        /usr/lib/lua/luci/dispatcher.lua:195: in function </usr/lib/lua/luci/dispatcher.lua:194>
+
+rm -r /tmp/luci-indexcache
+
+测试cron是否有效
+*/1 * * * * /root/reboot.sh > /root/reboot-$(date +'\%Y\%m\%d\%H\%M').log 2>&1
