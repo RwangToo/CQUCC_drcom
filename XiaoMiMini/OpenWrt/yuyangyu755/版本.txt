@@ -1,0 +1,4 @@
+openwrt20-11-17	OpenWrt 19.07-SNAPSHOT 4.14.206
+openwrt21-1-25	OpenWrt 19.07-SNAPSHOT 4.14.216
+openwrt21-5-8	OpenWrt 19.07-SNAPSHOT 4.14.232
+openwrt21-10-13	OpenWrt R21.10.1 5.4.150
